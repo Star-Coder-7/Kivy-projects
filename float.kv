@@ -1,0 +1,50 @@
+<Button>
+    font_size: 32
+    size_hint: (0.3, 0.3)
+    background_normal: ''
+    background_color: 'purple'
+    color: 'red'
+
+<MyFloatLayout>
+
+    FloatLayout:
+        size: root.width, root.height
+
+        # padding: 50
+        # spacing: 20
+
+        Button:
+            text: "Top Left"
+            pos_hint: {"x": 0, "top": 1}
+
+        Button:
+            text: "Middle Top"
+            pos_hint: {"x": 0.35, "top": 1}
+
+        Button:
+            text: "Top Right"
+            pos_hint: {"x": 0.7, "top": 1}
+
+        Button:
+            text: "Middle Right"
+            pos_hint: {"x": 0.7, "top": 0.65}
+
+        Button:
+            text: "Center"
+            pos_hint: {"x": 0.35, "y": 0.35}
+
+        Button:
+            text: "Middle left"
+            pos_hint: {"x": 0, "top": 0.65}
+
+        Button:
+            text: "Bottom Left"
+            pos_hint: {"x": 0}
+
+        Button:
+            text: "Middle Bottom"
+            pos_hint: {"x": 0.35, "Bottom": 1}
+
+        Button:
+            text: "Bottom Right"
+            pos_hint: {"x": 0.7, "bottom": 1}

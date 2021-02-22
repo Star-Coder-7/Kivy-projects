@@ -1,0 +1,41 @@
+<TextInput>
+    background_normal: ''
+    background_color: 'purple'
+
+<MyBoxLayout>
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        padding: 10
+        spacing: 10
+
+        Label:
+            text: "Name"
+            font_size: 45
+            background_color: (182/255, 66/255, 245/255, 1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            color: (50/255, 60/255, 168/255, 1)
+            bold: True
+            italic: True
+            outline_color: (245/255, 233/255, 66/255)
+            outline_width: 5
+
+        TextInput:
+            multiline: False
+
+        Button:
+            text: "Clear"
+            font_size: 45
+            background_normal: ''
+            background_color: 'red'    # It is possible to override code in python
+            color: (66/255, 239/255, 245/255, 1)
+            bold: True
+            italic: True
+            outline_color: (72/255, 245/255, 66/245)
+            outline_width: 5
