@@ -19,15 +19,23 @@ class MyBoxLayout(Widget):
         self.ids.calcInput.text = expression
 
     def buttonEntry(self, entry):
-        if self.ids.calcInput.text == '0':
-            self.ids.calcInput.text = ''
-
         expression = self.ids.calcInput.text
+
+        if "Sorry, Error" in expression:
+            expression = ''
+
+        if self.ids.calcInput.text == '0':
+            expression = ''
+
         self.ids.calcInput.text = f'{expression}{entry}'
 
     def buttonEqual(self):
         expression = self.ids.calcInput.text
-        self.ids.calcInput.text = str(eval(expression))
+
+        try:
+            self.ids.calcInput.text = str(eval(expression))
+        except:
+            self.ids.calcInput.text = "Sorry, Error"
 
     def buttonDot(self):
         expression = self.ids.calcInput.text
